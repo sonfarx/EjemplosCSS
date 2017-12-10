@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* CSS Document */
+
+form {
+	border: 1px solid #ccc;
+	width: 25%;
+	margin: 30px;
+	padding: 20px;
+}
+
+label {
+	font-size: 25;
+	width: 100%; /* ocupando todo el tamaño posible */
+	display: block;  /* haciendo de cada label un bloque completo */
+}
+
+textarea {
+	resize: vertical;
+	min-height: 100px;
+	max-height: 300px;
+}
+
+input, textarea {
+	margin-bottom: 20px; /* Dejando espacio hacia abajo */
+	width: 100%;   /* ocupando toda la caja */
+	padding: 10px; /* agranadando las cajas de entrada */
+	box-sizing:border-box;  /* Establece el ancho de las cajas con 
+							su margen izquierdo como enestá en el derecho */
+	border: 1px solid #ddd;	/* Coloreando las lineas de todo el imput */
+}
+
+input:focus, textarea:focus {
+	
+	border: 1px solid #046CF9;   /* Al tener en foco cada campo se coloorea su borde */
+}
+
+input[type="submit"] {
+	margin-bottom: 0px; /* Elimina el margen inferior establecido en el input */
+	background: #046CF9;
+	color: #fff;
+}
+
+input[type="submit"]:hover {  /* Efectos al pasar el cursor encima del botón */
+	background: #379FFE;
+	cursor: pointer;  /* El cursor es el de la manita */
+}
+
+input[type="submit"]:active {
+	background: #EEE;
+	color:#000;
+}
+
+

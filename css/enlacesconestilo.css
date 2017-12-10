@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+a {
+	text-decoration: none;
+	margin: 15px 15px 0px 15px;
+	color: blue;
+	font-size: 20px;
+}
+
+a:link{
+	color:red;
+	text-decoration: overline;
+}
+a:active {  /* Esta psedoclase tiene conflicto si las demás tienen efectos definidos */
+	background: #DF22DE;
+	text-decoration: underline;
+}
+a:hover {   
+	background-color: aqua;
+	color:#fff;
+	text-decoration: line-through;
+}
+
+a:visited {
+	color: #aaa; /* No todos los demás efectos funcionan si ya hay otros definidos en link */
+}

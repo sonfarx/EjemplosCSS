@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* h1, a, div, p {
+	background: #8BD9DD;
+}
+En lo anterior solo se rellena el bloque completo del documento 
+excepto en las lineas como lo son los links, barca solo el contenido del texto
+*/
+
+
+div {
+	background:  #8BD9DD;
+	width: 300px;
+	height: 300px;
+	margin: 20px 50px; /* el de la izquierda es margen sup e inf, y el de la derecha es margen de los lados
+						puede colocarse solo un margen y se entenderá que es margen por todos los lados*/
+	
+	padding: 15px; /* tomar en cuenta que los 15px de padding de arriba y abajo 
+					se agregaran 30px en total a los 300px que definimos de altura 
+					y a los lados se agregaran otros 30px */
+	
+	border: 5px solid #000000; /* Tomar también en cuenta que al agregar borde se estan agregando 
+								en total 10px de ancho y otros 10px en lo alto */
+	
+	
+	display: inline-block; /* muestra los bloques uno al lado del otro*/
+}

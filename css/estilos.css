@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+body {
+	font-size: 18px;
+}
+
+h2,h3,h4,h5 {
+	color: red;
+}
+h1 {
+	font-size: 50px;
+}
+h2 {
+	font-size: 35px;
+	color: rgba(221,165,83,0.48);
+}
+
+p {
+	color:aqua;
+}
+
+p a {
+	color: darkolivegreen;
+}
+
+.colorin {
+	color: chocolate;
+}
+
+a[href="http://www.falconmasters.com"] {
+	color: indigo;
+	font-size: 25px;
+}
+
+div {
+	font-size: 20px;
+	background-color: darkslateblue;
+	width: 600px;
+}
+
+div p {
+	font-size: 2em;
+}

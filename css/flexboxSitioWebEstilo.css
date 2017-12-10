@@ -1,0 +1,279 @@
+@charset "utf-8";
+
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: #E9E9E9;
+}
+
+.contenedor {
+  width: 90%;
+  max-width: 1000px;
+  background: #CCCCCC;
+  margin: auto;
+
+  /* FLEX */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+}
+
+header {
+  background: #3a403a;
+  width: 100%;
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* Debe colocarse porque también es elemento padre del logo y menú */
+
+  -webkit-box-pack: justify;
+
+      -ms-flex-pack: justify;
+
+          justify-content: space-between; /* ponemos el logo y link de un extemo y los del menú en el opuesto */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+header .logo {
+  color: #FFFFFF;
+  font-size: 30px;
+
+}
+
+header .logo img {
+  height: 50px; /* Estableciendo el alto pequeño que queremos que tenga la imagen para que se centre */
+  vertical-align: top;              /* A */
+}                                   /* | */
+header .logo a {                    /* | */
+  text-decoration: none;            /* | */
+  color: #FFFFFF;                      /* V */
+  line-height: 50px; /* Con esto le decimos que la caja de a es como el alto de la imagen para que quede centrada verticalmente */
+}
+
+header nav {
+
+  width: 50%; /* Quiero que ocupe la mitad del largo del contenedor */
+
+  /* Flexbox */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex; /* Debido a que es un subcontenedor debe tener su propio flexbox */
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+
+  -webkit-box-align: center;
+
+      -ms-flex-align: center;
+
+          align-items: center;
+}
+
+header nav a {
+  text-decoration: none;
+  padding: 10px;
+  background: #C0392B;
+  color: #FFFFFF;
+  text-align: center;
+
+  /* Flexbox*/
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; /* Siendo un elemento hijo de un flex puede usar la propiedesdes flex. En este caso quiero que todos los elementos tengan una proporción de tal manera que ocupen el 100% de su contenedor padre */
+
+}
+header nav a:hover {
+  background: #e9897f;
+}
+
+/************************** Inicia el bloque principal ***************************************/
+.principal {
+  background: #FFFFFF;
+  padding: 20px;
+
+  /* Flexbox */
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 70%;
+          flex: 1 1 70%;  /* Quiero un flex-grow de 1 un flex-shrink de 1 y un flex-basis de 70% */
+  /* flex: 1; /* NOTA*** Hacer esto si lo que queremos es solo cambiar el tamaño de esta sección pero mantener fijo el tamaño de aside */
+}
+
+.principal article {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #000000;
+}
+
+.principal article:nth-last-child(1) { /* El último elemento article no tendrá borde ni padding ni linea de borde */
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+  border-bottom: none;
+}
+
+aside {
+  background: #ee5e17;
+  padding: 20px;
+  /* Flexbox */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; /* Quiero que ocupe desde la parte superior */
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%; /* Quiero que el tamaño de este bloque se coloque junto a .principal ocupandop el 30% que queda vacio a la derecha
+                     de .principal  */
+
+/*  flex: 0 0 300px;  /* NOTA*** Hcer esto si lo que va a cambiar solo es la sección principal. Esto indica que tiene un tamaño es fijo, nunca va a cambiar*/
+}
+
+
+aside .widget {
+  background: #ac3900;
+  height: 150px;
+  margin: 10px;
+}
+
+
+/******************************  Sección de footer  ************************************************/
+
+footer {
+    background: #3a403a;
+    width: 100%;
+    padding: 20px;
+    /* Flexbox */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;  /* También es un elemento padre que modificará a sus elementos hijos */
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+
+
+footer .links {
+  background: #C0392B;
+  /* Flexbox */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;                 /* Este también es elemento padre que modificará sus hijos anchors */
+
+  -ms-flex-wrap: wrap;
+
+      flex-wrap: wrap;
+
+}
+
+footer .links a {
+  padding: 10px;
+  background: #C0392B;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+
+}
+
+footer .links a:hover {
+  background: #e9897f;
+}
+
+footer .social a {
+  padding: 10px;
+  background: #c1922b;
+  color: #FFFFFF;
+  text-align: center;
+  text-decoration: none;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  display: inline-block; /* Esto nos hace un bloque en-linea como a .links, de manera que así queda centrado de acuerdo a lo que se especificó en footer */
+}
+
+footer .social a:hover {
+  background: #e9c87f;
+}
+
+@media screen and (max-width: 800px) {   /* _Estableciendo un media query de 800px para que sea visible en dispositivos móveiles */
+
+  .contenedor {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 0px; /*Eliminando el padig quedará pegado al bloque de la sección principal */
+  }
+
+  header .logo {
+    margin: 20px 0px;
+  }
+
+
+  header nav {
+    width: 100%;
+  }
+
+  aside {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; /* Con esto le decimos que queremos que los contenidos del aside esten en fila ya no en columnas */
+    -webkit-box-flex: 0;
+        -ms-flex: 0;
+            flex: 0;
+  }
+
+  aside .widget {
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;  /* Que ocupen todo el ancho posible */
+  }
+}
+
+@media screen and (max-width: 600px){ /* Si el aside se vuelve demasiado pequeño volver a colocarlo en columnas */
+  aside {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  footer {
+    -ms-flex-pack: distribute;
+        justify-content: space-around; /* Si es demasiado pqueño coloca el menu al nuevo ancho establecido */
+  }
+}

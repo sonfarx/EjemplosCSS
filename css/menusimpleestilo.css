@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+
+.menu {
+	width: 100%;
+	background: #000;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	
+}
+
+.menu > li { 				 /* .menu li es lo mismo que poner .menu > li
+								Convierte en un solo bloque los li (en linea uno a lado del otro) */
+	display: inline-block;
+}
+
+.menu li a {
+	padding: 20px 10px;
+	display: inline-block; /* Volviendo los elementos de 'a' en bloque para que surja efecto el padding */
+	color: #fff;
+	text-decoration: none;
+}
+
+.menu li a:hover {      /* seleccionando la pseudoclase de 'a' */
+	background: #1B77C3;
+	
+}

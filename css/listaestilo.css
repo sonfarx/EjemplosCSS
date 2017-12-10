@@ -1,0 +1,13 @@
+@charset "utf-8";
+/* CSS Document */
+
+ul {
+	list-style-position: inside; /* Coloca un margen hacia dentro de su bloque */
+}
+ul > ul {   /* Indicando que queremos usar las etiquetas ul dentro de la padre ul */
+	list-style-type:georgian;
+}
+
+ol {
+	list-style: decimal-leading-zero;
+}

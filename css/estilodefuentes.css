@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+
+h1 {
+	font-weight: normal;
+	text-align: center;
+	background: #ccc;
+}
+
+p {
+	font-family: Palatino Linotype, Gloucester MT Extra Condensed ;
+	font-size: 20px;
+	text-align: center;
+	text-decoration: line-through;
+	text-decoration-color: aqua;
+	text-shadow: 2px 2px 1px #f66;
+	line-height: 20px;
+	letter-spacing: 2px;
+	word-spacing: 10px;
+	
+}
+
+a {
+	text-decoration: none;
+}

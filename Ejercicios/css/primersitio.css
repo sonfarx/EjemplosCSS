@@ -1,0 +1,74 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+body {
+	background: #eee;
+}
+
+header, .main, footer {
+	background: #fff;
+	width: 90%;
+	max-width: 1000px;
+	margin: 20px auto;
+}
+
+/********* Encabezado **********/
+
+header nav {
+	background:#0C5817;
+	overflow: hidden;
+}
+
+header nav ul {
+	list-style: none;
+}
+
+header nav ul li {
+	float: left;
+}
+header nav ul li a {
+	display: block;
+	text-decoration: none;
+	color: #fff;
+	padding: 20px;
+}
+header nav ul li a:hover {
+	background: #84B077;
+}
+
+/************** Artículos ******************/
+
+
+.main .articles {
+	float: left;
+	width: 68%;
+	margin-right: 2%;
+}
+
+.main .articles article {
+	padding: 20px;
+	margin-bottom: 20px;
+	background: #fff;
+}
+
+aside {
+	padding: 20px;
+	float: left;
+	width: 30%;
+	background: #BD0003;
+	color: #fff;
+	box-sizing: border-box;
+}
+
+footer {
+	background: #000;
+	color: #fff;
+	clear: both;
+	padding: 15px 0px;
+	text-align: center;
+}

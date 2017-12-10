@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background: #e6e6e6;
+}
+
+header, .main, footer {
+	width: 90%; /* Permite que todos ocupen el mismo tammaño */
+	max-width: 1000px;
+	background: #fff;
+	margin: 20px auto; /* Aparte de establecer margen, deja centrado todos los bloques */
+}
+
+/*********** Sección de encabezado ******************/
+header nav{
+	background: #359DF3;
+	overflow: hidden;   /* Se hay contenido que se pase del tamaño especificado, este se oculta */
+}
+
+header nav ul {
+	list-style: none;
+}
+header nav ul li {
+	float: left;
+}
+
+header nav ul li a {
+	display: block;
+	padding: 20px 20px;
+	text-decoration: none;
+	color: #fff;
+}
+
+header nav ul li a:hover {
+	background: #6FC5EF;
+}
+
+/********* Sección de los artículos ************/
+.main .articles {
+	width: 68.5%;
+	margin-right: 1.5%;
+	float: left;
+}
+
+.main .articles article {
+	background: #fff;
+	margin-bottom: 20px;
+	padding: 20px;
+	
+}
+aside {
+	width: 30%;
+	background: #F5CA9A;
+	float: left;
+	padding: 20px;
+	box-sizing: border-box;
+}
+
+footer {
+	background: #000;
+	color: #FFF;
+	clear: both;
+	padding: 20px 0px;
+	text-align: center;
+}

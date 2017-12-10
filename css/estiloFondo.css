@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+	color: aliceblue;
+	background:url(../../imagenes/Her_Guardian_Angel.jpg);
+	background-repeat: no-repeat;
+	background-attachment: fixed; /*Fijación del fondo en inamovible*/
+	
+	background-position: center 10Px;  /* Centrando el fondo horizontalmente y a 10 px desde arriba */
+}

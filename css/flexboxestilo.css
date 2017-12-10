@@ -1,0 +1,90 @@
+body {
+  background: #E9E9E9;
+}
+
+.contenedor {
+  width: 500px;
+  height: 400px;
+  background: #fff;
+  border: 10px solid #2C3E50;
+  margin: 20px;
+  padding: 10px;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;  /* <--- Lo propiedad principal que establecer para empezar con flexbox */
+
+
+  -webkit-box-orient: horizontal;
+
+
+  -webkit-box-direction: normal;
+
+
+      -ms-flex-direction: row;
+
+
+          flex-direction: row;   /* 1- row Coloca todos los elementod del contenedor en una fila horizontal de izq a der
+                               2- row-reverse los coloca de derecha a izq manteniendo el orden de los elementos
+                               3- column loc coloca en una columna  de arriba hacia abajo
+                               4- column-reverse los coloca en el mismo orden pero de abajo hacia arriba  */
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap; /* 1- wrap acomoda los elementos dentro del contenedor distribuyéndolos en filas si exceden el ancho del contenedor
+                      2- nowrap acomoda de manera horizontal estrictamenmte, es una sola fila con varias columnas; nunca los acomoda en varias filas */
+
+  -webkit-box-pack:center;
+
+      -ms-flex-pack:center;
+
+          justify-content:center;  /* 1- Centra el contenedor horizontalmente y verticalmente manteniendo el espacio entre los elementos
+                              2- Esta propiedad solo funciona para varias líneas [flex-wrap: wrap;] */
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; /* Centra verticalmente el contenedor manteniendo el espacio vertical de los elementos */
+  /*align-content: center; /* Centra vertical y horizontalmento los elementos que están dentro del contenedor a un espacio menor entre ellos.
+                              Tiene efecto si está en modo [flex-wrap: wrap] y los elementos se han acomodado en más de una fila */
+
+
+}
+
+.elemento {
+  /*flex-basis: 200px; /* Muy similar al widt o height, pero depende de lo establecido en flex-direction
+                        usará ancho si está en row o row-reverse y el alto si está en column o column-reverse */
+/*  flex-grow: 1; /* Establece un ancho agregado para cada elemento de manera que ocupen todo el ancho (o alto) en conjunto del contenedor,
+                  el ancho agregado al tamaño especificado en el width será el valor de un grow=1 si este es pequeño */
+/*  flex-shrink: 1; /* Similar a flex-grow solo que si el with de un elemento es muy grande, éste le resta pixeles al ancho
+                  establecido en with para que ocupen en conjunto topa el ancho del contenedor, el valor de restado de pixeles para los elementos es de un shrink=1  */
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1; /* Es el atajo a flex-grow=1 y flex-shrink=1; esto indica que no se modificará su tamaño
+              [flex: 1 1 50px] es equivalente a [flex-grrow:1] [flex-shrink:1] y [flex-basis:50px] */
+  width: 50px;
+  height: 50px;
+  background: #e6a538;
+  color: #fff;
+  margin: 5px;
+  text-align: center;
+}
+
+
+.elemento1{
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;  /* Colocado al ültimo */
+}
+.elemento2{
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;  /* Colocado segundo (tal como estaba)*/
+}
+.elemento3{
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;  /* Colocado primero */
+}
+.elemento4{
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3; /* Colocado tercero */
+  -ms-flex-item-align: start;
+      align-self: flex-start; /* este sube este elemento hasta arriba */
+}

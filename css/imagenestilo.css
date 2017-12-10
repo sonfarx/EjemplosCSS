@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+div {
+	width: 100%;
+	background: #ddd;
+
+}
+
+img {
+	width: 400px;  /* Tiene prioridad el tamaño establecido aquí sobre el de html */
+	height: auto;
+	margin: auto;
+	display: block;
+	border-radius: 50%;   /* especificar 50% lo hace circular */
+	box-shadow: 15px -10px 20px #000;
+	
+	padding: 20px;
+	border: solid 1px #E37406;
+}
